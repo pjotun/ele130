@@ -9,10 +9,8 @@ Python-skriptet trekkjer ut informasjonen og lagar ei CSV-fil som kan hentast in
   \centering
   \begin{tabular}{|p{2.5cm}|p{7cm}|}\hline
     Gruppe \gruppe & Navn \\\hline\hline
-    \student & Per Olsen, Y‐vei1 \\\hline
-    \student & Ole Olsen, Y‐vei1 \\\hline
-    \student & Anne Persen, Y‐vei1 \\\hline
-    \student & Kari Jensen, Y‐vei1 \\\hline
+    \student & Kari Jensen, S‐vei1, full jobb \\\hline
+    \student & Kari Helene Jensen, enkeltemne \\\hline
   \end{tabular}
 \end{table}
 ```
@@ -30,6 +28,12 @@ I fyrste omgang byggjer eg opp eller samlar Python-kode for å gjera føgjande:
 5. Ynskjer å dele namnet i førenamn og etternamn
    1. Kan bruke ```rindex``` for å finne siste *mellomrommet* i namnet
    2. Erstatte *mellomrommet* med *komma* for splitte namnet i førenamn og etternamn
+6. La til kode for å hente ut *status* (element nr. 3 etter studie)
+   1. brukte ```if``` og ```len``` som vil vera 3 om status er med
+   
+Har nå kode som får tak i alle dei elemnta eg treng for CSV-fila, i tillegg teljar for gruppenummer og fortløpande studentnummer frå ***1*** som i den kompilerte Latex-fila.
+
+Prøvde ut litt å sy saman ein CSV-streng, men må sjå på rekkjefølgja i koda og nummerering av gruppene, for å få ei line for kvar student og rett gruppenummer.
 
 *Per Jotun*  
 *27. januar 2023*

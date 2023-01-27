@@ -20,6 +20,10 @@ p = pl.Path(__file__).parent.absolute() / filInn
 print(p)
 gr_nr = 0
 stud_nr = 0
+gruppe_snr = 2300
+csv_streng = ""
+csv_topp = "gruppe,studnr,forenamn,etternamn,studie,status"
+print(csv_topp)
 # Eit standard oppsett med try - except blir da slik:
 try:
     with p.open(mode="r") as fi:
@@ -35,9 +39,13 @@ try:
             if gruppe == 4:
                 gr_nr += 1
                 print(f"Gruppenummeret er: {gr_nr}")
+                csv_streng = str(gruppe_snr+gr_nr)+","
+                print(csv_streng)
             if student == 5:
                 stud_nr += 1
                 print(f"Studentnummeret er: {stud_nr}")
+                csv_streng = csv_streng + str(stud_nr)+","
+                print(csv_streng)
                 namn_slutt = line.find("hline")
                 print(namn_slutt)
                 print(line[student+10:namn_slutt-4])
@@ -62,6 +70,7 @@ try:
                 namn = namn.split(",")
                 # Førenamn
                 print(namn[0])
+                csv_streng = csv_streng + namn[0] + "," + namn[1] + ","
                 # Etternamn
                 print(namn[1])
 
