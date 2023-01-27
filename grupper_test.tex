@@ -1,0 +1,72 @@
+\documentclass[11pt]{article}
+\usepackage[norsk]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb}
+\usepackage{color,subfigure,here}
+\usepackage{array,psfrag,epsfig}
+\usepackage[force,full]{textcomp}
+\usepackage{pstricks,pst-plot,pst-node}
+\usepackage{colortbl,enumerate}
+
+\usepackage[force,full]{textcomp}
+\usepackage[symbol]{footmisc}
+\usepackage{graphicx,subfigure}
+
+
+\topmargin 0.0cm
+\oddsidemargin 0.2cm
+\textwidth 15cm 
+\textheight 20cm
+\footskip 1.0cm
+
+
+
+\newcommand{\student}{\addtocounter{StudNo}{1}\arabic{StudNo}}
+\newcommand{\gruppe}{\addtocounter{GruppeNo}{1}\arabic{GruppeNo}}
+
+\begin{document}
+
+Gruppeinndeling høsten 20XX:
+
+\newcounter{StudNo}
+\setcounter{StudNo}{0}
+\newcounter{GruppeNo}
+\setcounter{GruppeNo}{XX00}
+
+
+\begin{table}[H]
+  \centering
+  \begin{tabular}{|p{2.5cm}|p{7cm}|}\hline
+    Gruppe \gruppe & Navn \\\hline\hline
+    \student & Per Olsen, Y‐vei1 \\\hline
+    \student & Ole Olsen, Y‐vei1 \\\hline
+    \student & Anne Persen, Y‐vei1 \\\hline
+    \student & Kari Jensen, Y‐vei1 \\\hline
+  \end{tabular}
+\end{table}
+
+\begin{table}[H]
+  \centering
+  \begin{tabular}{|p{2.5cm}|p{7cm}|}\hline
+    Gruppe \gruppe & Navn \\\hline\hline
+    \student & Per Olsen, S‐vei1 \\\hline
+    \student & Ole Olsen, S‐vei1 \\\hline
+    \student & Anne Persen, S‐vei1 \\\hline
+    \student & Kari Jensen, Data \\\hline
+
+  \end{tabular}
+\end{table}
+
+\begin{table}[H]
+  \centering
+  \begin{tabular}{|p{2.5cm}|p{7cm}|}\hline
+    Gruppe \gruppe & Navn \\\hline\hline
+    \student & Kari Jensen, S‐vei1, full jobb \\\hline
+    \student & Kari Helene Jensen, enkeltemne \\\hline
+  \end{tabular}
+\end{table}
+
+
+
+\end{document}
+
