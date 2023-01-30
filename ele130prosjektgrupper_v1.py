@@ -22,7 +22,7 @@ gr_nr = 0
 stud_nr = 0
 gruppe_snr = 2300
 csv_streng = ""
-csv_topp = "gruppe,studnr,forenamn,etternamn,studie,status"
+csv_topp = "Gruppe,Studnr,Forenamn,Etternamn,Studie,Status"
 print(csv_topp)
 # Eit standard oppsett med try - except blir da slik:
 try:
