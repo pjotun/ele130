@@ -39,11 +39,11 @@ try:
             if gruppe == 4:
                 gr_nr += 1
                 print(f"Gruppenummeret er: {gr_nr}")
-                csv_streng = str(gruppe_snr+gr_nr)+","
-                print(csv_streng)
             if student == 5:
                 stud_nr += 1
                 print(f"Studentnummeret er: {stud_nr}")
+                csv_streng = str(gruppe_snr+gr_nr)+","
+                print(csv_streng)
                 csv_streng = csv_streng + str(stud_nr)+","
                 print(csv_streng)
                 namn_slutt = line.find("hline")
@@ -70,9 +70,12 @@ try:
                 namn = namn.split(",")
                 # Førenamn
                 print(namn[0])
-                csv_streng = csv_streng + namn[0] + "," + namn[1] + ","
                 # Etternamn
                 print(namn[1])
+                csv_streng = csv_streng + namn[0] + "," + namn[1] + "," + namn_studie[1] + ","
+                if len(namn_studie) == 3:
+                    csv_streng = csv_streng + namn_studie[2]
+                print(csv_streng)
 
     fi.close()
 except IOError as e:
