@@ -38,40 +38,40 @@ try:
             #print(student)
             if gruppe == 4:
                 gr_nr += 1
-                print(f"Gruppenummeret er: {gr_nr}")
+                #print(f"Gruppenummeret er: {gr_nr}")
             if student == 5:
                 stud_nr += 1
-                print(f"Studentnummeret er: {stud_nr}")
+                #print(f"Studentnummeret er: {stud_nr}")
                 csv_streng = str(gruppe_snr+gr_nr)+","
-                print(csv_streng)
+                #print(csv_streng)
                 csv_streng = csv_streng + str(stud_nr)+","
-                print(csv_streng)
+                #print(csv_streng)
                 namn_slutt = line.find("hline")
-                print(namn_slutt)
-                print(line[student+10:namn_slutt-4])
+                #print(namn_slutt)
+                #print(line[student+10:namn_slutt-4])
                 namn_studie = line[student+10:namn_slutt-4]
                 namn_studie = namn_studie.replace(", ", ",")
-                print(namn_studie)
+                #print(namn_studie)
                 namn_studie = namn_studie.split(",")
                 # Finn mellomrommet før etternamnet
                 siste_mrom = namn_studie[0].rindex(" ")
                 # Namnet
-                print(namn_studie[0])
-                print(siste_mrom)
+                #print(namn_studie[0])
+                #print(siste_mrom)
                 # Studie
-                print(f"Studie: {namn_studie[1]}")
-                if len(namn_studie) == 3:
-                    print(f"Status: {namn_studie[2]}")
+                #print(f"Studie: {namn_studie[1]}")
+                #if len(namn_studie) == 3:
+                #    print(f"Status: {namn_studie[2]}")
                 # Erstattar mellomrommet med komma
                 # https://favtutor.com/blogs/replace-character-string-python
                 # str = str[:index] + new_character + str[index+1:]
                 namn = namn_studie[0][:siste_mrom] + "," + namn_studie[0][siste_mrom+1:]
-                print(namn)
+                #print(namn)
                 namn = namn.split(",")
                 # Førenamn
-                print(namn[0])
+                #print(namn[0])
                 # Etternamn
-                print(namn[1])
+                #print(namn[1])
                 csv_streng = csv_streng + namn[0] + "," + namn[1] + "," + namn_studie[1] + ","
                 if len(namn_studie) == 3:
                     csv_streng = csv_streng + namn_studie[2]
