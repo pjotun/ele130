@@ -75,6 +75,8 @@ try:
                 csv_streng = csv_streng + namn[0] + "," + namn[1] + "," + namn_studie[1] + ","
                 if len(namn_studie) == 3:
                     csv_streng = csv_streng + namn_studie[2]
+                else:
+                    csv_streng = csv_streng + ","
                 print(csv_streng)
 
     fi.close()
