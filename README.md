@@ -35,5 +35,16 @@ Har nå kode som får tak i alle dei elemnta eg treng for CSV-fila, i tillegg te
 
 Prøvde ut litt å sy saman ein CSV-streng, men må sjå på rekkjefølgja i koda og nummerering av gruppene, for å få ei line for kvar student og rett gruppenummer.
 
+## 31. januar 2023
+
+Har nå eit python-skript som fungerar, har lagt til slik at eg kan bruke LaTeX-fila som argument når eg kjører skriptet slik:
+
+```bash
+python3 ele130prosjektgrupper_v1.py ele130_20230131.tex
+```
+Skriptet er ikkje særleg robust enda og det krev strukturert formatering av LaTeX-fila. La bl.a. til ein kommentar i LaTeX-fila for kor mange det er i kvar gruppe, som blir henta inn som ei kolonne i CSV-fila. Målet vil er å la python-skriptet finne ut dette sjølv, men så langt er det enkalste måten å gjera det på slik.
+
+
 *Per Jotun*  
-*27. januar 2023*
+*27. januar 2023*  
+*31. januar 2023*
