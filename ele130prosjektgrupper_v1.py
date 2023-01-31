@@ -6,27 +6,31 @@
 # Hente ut grupper og namn frå LaTeX-fil
 # Skrive ut til ei CSV-fil
 
+# For å kunna lesa filnamnet som parameter
+import sys
 # Må bruke biblioteket pathlib
 import pathlib as pl
 # For å få datoen i dag
 from datetime import date
 dato = date.today()
 idag = dato.strftime("%Y.%m.%d")
-filInn = "grupper_test.tex"
+#filInn = "ele130_20230131.tex"
+# https://askubuntu.com/questions/1059579/input-the-filename-in-the-commandline-as-an-argument-in-python
+filInn = sys.argv[1]
 mappe = pl.Path.cwd()
 # Berre ein test
-print(mappe)
-print(mappe.resolve())
+#print(mappe)
+#print(mappe.resolve())
 # https://www.delftstack.com/howto/python/python-get-path/ og
 # https://realpython.com/python-pathlib/
 p = pl.Path(__file__).parent.absolute() / filInn
-print(p)
+#print(p)
 gr_nr = 0
 stud_nr = 0
 gruppe_snr = 2300
 csv_streng = ""
 csv_tittel = "ELE130 2023 Grupper i LEGO-prosjektet"
-csv_topp = "Gruppe,Studnr,Forenamn,Etternamn,Studie,Status"
+csv_topp = "Gruppe,Gr.str.,Studnr.,Førenamn,Etternamn,Studie,Status"
 print(csv_tittel)
 print(idag)
 print(csv_topp)
