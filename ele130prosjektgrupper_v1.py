@@ -2,13 +2,16 @@
 # Per Jotun
 # Versjon 1
 # 26. januar 2023
-# 
+#
 # Hente ut grupper og namn frå LaTeX-fil
 # Skrive ut til ei CSV-fil
 
 # Må bruke biblioteket pathlib
 import pathlib as pl
-
+# For å få datoen i dag
+from datetime import date
+dato = date.today()
+idag = dato.strftime("%Y.%m.%d")
 filInn = "grupper_test.tex"
 mappe = pl.Path.cwd()
 # Berre ein test
@@ -22,7 +25,10 @@ gr_nr = 0
 stud_nr = 0
 gruppe_snr = 2300
 csv_streng = ""
+csv_tittel = "ELE130 2023 Grupper i LEGO-prosjektet"
 csv_topp = "Gruppe,Studnr,Forenamn,Etternamn,Studie,Status"
+print(csv_tittel)
+print(idag)
 print(csv_topp)
 # Eit standard oppsett med try - except blir da slik:
 try:
@@ -33,16 +39,20 @@ try:
             # Her skriv berre ut at fila line for line
             #print(line)
             gruppe = line.find("Gruppe")
+            tal = line.find("Tal:")
             student = line.find("student")
             #print(gruppe)
             #print(student)
             if gruppe == 4:
                 gr_nr += 1
                 #print(f"Gruppenummeret er: {gr_nr}")
+            if tal == 6:
+                line = line.replace("\n", "")
+                gr_str = line[tal+4:]
             if student == 5:
                 stud_nr += 1
                 #print(f"Studentnummeret er: {stud_nr}")
-                csv_streng = str(gruppe_snr+gr_nr)+","
+                csv_streng = str(gruppe_snr+gr_nr) + "," + gr_str + ","
                 #print(csv_streng)
                 csv_streng = csv_streng + str(stud_nr)+","
                 #print(csv_streng)
