@@ -86,6 +86,7 @@ try:
                 #print(namn[0])
                 # Etternamn
                 #print(namn[1])
+                # Skriv ut all informasjon som CSV-fil, line for line
                 csv_streng = csv_streng + namn[0] + "," + namn[1] + "," + namn_studie[1] + ","
                 if len(namn_studie) == 3:
                     csv_streng = csv_streng + namn_studie[2]
